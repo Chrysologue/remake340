@@ -1,1 +1,53 @@
 /******* Change Box Model ***************/
+@media screen and (min-width: 450px) {
+    header {
+        position: static;
+        padding: 10px 16px;
+    }
+
+    .hamburger-lines {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0);
+        transition: none;
+    }
+
+    nav ul {
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        column-gap: 15px;
+    }
+
+    nav ul li {
+        width: auto;
+    }
+
+    nav ul li a {
+        width: auto;
+        padding: 10px 5px;
+        font-size: 1em;
+    }
+
+    nav ul li a::before {
+        bottom: 5px;
+    }
+
+    .siteName a {
+        font-size: 2rem;
+    }
+
+    #tools a {
+        font-size: 1.2rem;
+    }
+
+    /* Index style starts here */
+    #homeSect {
+        margin-top: 0;
+    }
+}
