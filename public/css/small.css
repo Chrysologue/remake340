@@ -1,0 +1,130 @@
+/******* Change Box Model ***************/
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "DM Serif Display", serif;
+}
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    padding: 10px 5px;
+}
+.hamburger-lines{
+    width: 32px;
+    height: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+}
+
+.line1 {
+    transform-origin: 0 0;
+    transition: transform .3s ease-in;
+}
+.line2 {
+    transition: transform .2s ease-in;
+}
+.line3 {
+    transform-origin: 0 100%;
+    transition: transform .3s ease-in;
+}
+
+header.mobile-menu .line1 {
+    transform: rotate(45deg);
+}
+header.mobile-menu .line2 {
+    transform: scaleX(0);
+}
+header.mobile-menu .line3 {
+    transform: rotate(-45deg);
+}
+
+.siteName a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+#tools a{
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in;
+}
+header.mobile-menu ~ nav {
+    transform: translateX(0);
+}
+nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav ul li {
+    width: 100%;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 50%;
+    padding: 15px 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+    position: relative;
+}
+nav ul li a::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    display: block;
+    bottom: 2px;
+    left: 0;
+    height: 2px;
+    background-color: #0773a5;
+    transition: transform .3s ease-in;
+    transform-origin: center;
+    transform: scaleX(0);
+}
+nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Index style starts here */
+#homeSect {
+    margin-top: 3rem;
+}
