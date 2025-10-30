@@ -31,11 +31,14 @@ header {
     left: 0;
     padding: 10px 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    z-index: 10;
+    background-color: white;
     z-index: 100;
 }
 
 header.mobile-menu {
     box-shadow: none;
+    background-color: #253031;
 }
 
 .hamburger-lines {
@@ -102,6 +105,7 @@ header.mobile-menu .line3 {
     color: black;
     display: inline-block;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 #tools a {
@@ -118,11 +122,9 @@ nav {
     background-color: #253031;
     transform: translateX(-100%);
     transition: transform .3s ease-in;
+    z-index: 10;
 }
 
-/* nav.menu-transition {
-    transition: transform .3s ease-in;
-} */
 
 header.mobile-menu~nav {
     transform: translateX(0);
@@ -183,4 +185,131 @@ body.no-transition * {
 /* Index style starts here */
 #homeSect {
     margin-top: 4rem;
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80vh;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    inset: 0;
+}
+.hero-content {
+    position: relative;
+    max-width: 500px;
+    z-index: 1;
+    color: white;
+}
+.hero-content h1 {
+    font-size: 3em;
+}
+.hero-content h2 {
+    font-size: 2.5em;
+}
+.hero-content p {
+    font-size: 1.1rem;
+    color: rgb(255, 40, 40);
+}
+.ctc {
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+.ctc:hover {
+    background-color: rgb(6, 109, 150);
+    color: rgb(255, 255, 255);
+}
+.car {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    grid-template-areas:
+        "section1"
+        "section2";
+}
+.car h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+figure div {
+ background-color: rgb(13, 100, 180);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ aspect-ratio: 16/9;
+}
+figure div img {
+    width: 50px;
+    height: auto;
+}
+.upgrades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+figcaption {
+    text-align: center;
+}
+.reviews ul li {
+    margin-bottom: 5px;
+}
+.section1 { grid-area: section1; }
+.section2 { grid-area: section2; }
+
+/* Footer style */
+footer {
+  background-color: #253031;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #06ad96; /* a contrasting accent color */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h3 {
+  font-family: "DM Serif Display", serif;
+  margin-bottom: 1rem;
+}
+
+.footer-links, .footer-contact {
+  margin-bottom: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.footer-logo h3 {
+    font-size: 1.8em;
 }
