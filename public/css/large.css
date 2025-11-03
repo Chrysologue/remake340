@@ -15,6 +15,7 @@
         height: auto;
         transform: translateX(0);
         transition: none;
+        padding: 15px 0;
     }
 
     nav ul {
